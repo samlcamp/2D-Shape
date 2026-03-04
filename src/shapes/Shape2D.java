@@ -10,9 +10,23 @@ package shapes;
  * Shape2D
  */
 public abstract class Shape2D {
+    // Fields
+    protected Point centre;
 
-
-    public Shape2D(Point centre) {
-
+    // Constructor for 2D shape
+    public Shape2D(Point centre){
+       this.centre = centre;
     }
+
+    //Method for translating the centre
+    public void translate(double dx, double dy){
+        centre.translatePoint(dx,dy);
+    }
+
+    //Abstract methods
+    public abstract double getArea();
+    public abstract double getPerimeter();
+    public abstract boolean containsPoint(Point point);
+    public abstract Point[] getVertices();
+
 }
