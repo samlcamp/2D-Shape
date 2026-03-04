@@ -8,14 +8,10 @@ package shapes;
  * contain any vertices
  */
 
-public class Circle  {
+public abstact class Circle {
 
     //Fields
     private double radius;
-    private double perimeter;
-    private double area;
-
-
 
     /**
      * Constructor for Circle shape object
@@ -23,16 +19,17 @@ public class Circle  {
      * @param radius The radius of the circle created
      */
     public Circle(Point centre, double radius) {
-        this.Circle = centre, radius;;
+        super(centre);
+        this.radius = radius;
     }
 
     //Getters & Setters
     public double getRadius(){
-        return radius;
+        return this.radius;
     }
 
-    private double setRadius(){
-        return radius;
+    private double setRadius(double radius){
+        return this.radius = radius;
     }
 
     public double getPerimeter(){
